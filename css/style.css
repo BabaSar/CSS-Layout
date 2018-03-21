@@ -50,6 +50,9 @@ a {
     .container{
         width: 70%;
         margin: 0px auto;
+
+        max-width: 1000px;
+        /* This ensures the layout does not go stretch to beyond 1000 pixels in larger screens */
     }
 
 }
