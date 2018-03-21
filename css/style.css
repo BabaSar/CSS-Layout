@@ -47,6 +47,9 @@ a {
 /* Only those rules within the media query will be device specific */
 @media (min-width: 769px) {
 /* Targets any devices who's screen width is 769px or wider */
-    width: 70%;
-    margin: 0px auto;
+    .container{
+        width: 70%;
+        margin: 0px auto;
+    }
+
 }
