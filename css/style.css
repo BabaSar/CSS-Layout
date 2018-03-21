@@ -5,8 +5,7 @@
 body {
 	line-height: 1.6;
     color: #3a3a3a;
-    width: 70%;
-    margin: 0 auto;
+
 }
 
 a { 
@@ -18,16 +17,36 @@ a {
   Base Layout Styles
 ==================================== */
 
+/* ---- Navigation ---- */
+
+.name {
+    margin: 0;
+}
+
 /* ---- Layout Containers ---- */
+
+.container {
+
+}
 
 .main-header {
 	background: #3acec2;
 }
 
 .main-footer {
+    text-align: center;
 	padding: 2em 0;
 	background: #d9e4ea;
 }
 
-/* ---- Page Elements ---- */
+/* ================================= 
+    Media Queries
+==================================== */
 
+/* Everything outside of the media queries get applied to all devices */
+/* Only those rules within the media query will be device specific */
+@media (min-width: 769px) {
+/* Targets any devices who's screen width is 769px or wider */
+    width: 70%;
+    margin: 0px auto;
+}
