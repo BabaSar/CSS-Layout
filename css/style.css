@@ -1,6 +1,10 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
+* {
+    /* applies to all elements */
+    box-sizing: border-box;
+}
 
 body {
 	line-height: 1.6;
@@ -26,7 +30,8 @@ a {
 /* ---- Layout Containers ---- */
 
 .container {
-
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .main-header {
@@ -53,6 +58,11 @@ a {
 
         max-width: 1000px;
         /* This ensures the layout does not go stretch to beyond 1000 pixels in larger screens */
+        
+    }
+
+    .wrap{
+        min-height: calc(100vh - 89px);
     }
 
 }
