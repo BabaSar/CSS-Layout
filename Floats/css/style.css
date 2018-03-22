@@ -50,21 +50,22 @@ a {
 	margin-bottom: 6px;
 }
 
-.main-nav a {
-	font-size: .95em;
-	color: #3acec2;
-	text-transform: uppercase;
-}
-
-.main-nav a:hover {
-	color: #093a58;
-}
-
 .name a,
 .main-nav a {
-    display: block;
-    padding: 10px 15px;
+	padding: 10px 15px;
+	text-align: center;
+	display: block;
 }
+
+	.main-nav a {
+		font-size: .95em;
+		color: #3acec2;
+		text-transform: uppercase;
+	}
+	
+	.main-nav a:hover {
+		color: #093a58;
+	}
 
 /* ---- Layout Containers ---- */
 
@@ -77,8 +78,9 @@ a {
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
 	background: #3acec2;
-    margin-bottom: 30px;
-    text-align: center;
+	margin-bottom: 30px;
+	/* height: 110px; but this is not a flexible solution */
+	/* overflow: hidden; but this is not recommended for floats */
 }
 
 .main-footer {
@@ -87,45 +89,51 @@ a {
 	background: #d9e4ea;
 }
 
-.wrap {
-    min-height: calc(100vh - 89px);
-}
-
-
-
 /* ================================= 
   Media Queries
 ==================================== */
 
-@media (min-width: 769px) {
-/* Anything larger than 769px */
-/* The lowest width these styles apply to is 769px. And anything larger than this. But not lower. */
+@media (min-width: 789px) {
+
+	.wrap {
+		min-height: calc(100vh - 89px);
+	}
+
+	.name {
+		float: left;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		float: left;
+		margin-left: 12px;
+	}
+
 	.container {
-		width: 80%;
+		width: 85%;
 		max-width: 1150px;
 		margin: 0 auto;
-    }
-    
-    .name,
-    .main-nav li {
-        display: inline-block;
-    }
+	}
 
-    .name {
-        width: 240px;
-    }
+	.feat-img {
+		width: 300px;
+		float: left;
+		margin-top: 5px;
+		margin-right: 25px;
+		margin-bottom: 25px;
+	}
 
-    .main-nav li{
-        margin-right: 12px;
-    }
+	p {
+		/* margin-left: 50px; */
+	}
 
-	.col {
-	display: inline-block;
-	width: 50%;
-	/* background: rgba(217, 228, 234, .5); */
-	margin-right: -4px;
-	vertical-align: top;
-	padding-left: 1em;
-	padding-right: 1em;
-}
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+
 }
